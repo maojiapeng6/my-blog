@@ -1,0 +1,22 @@
+# 依赖与构建产物（体积大且可重建，不入库）
+src/node_modules/
+src/.pnpm-store/
+src/.astro/
+src/dist/
+dist/
+src/.turbo/
+
+# 环境与凭证
+.env
+*.token
+github_setup.sh
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*.bak2
+
+# 原始未压缩素材（线上使用的是压缩版）
+src/public/assets/videos/影视服务器展示.mp4
