@@ -52,14 +52,14 @@ if [ "$AUTO_SYNC" != "0" ]; then
     exit 1
   fi
 
-  if [ ! -d "$SRC/.git" ]; then
+  if [ ! -d "$SRC/.git" ] && [ ! -d "$SRC/../.git" ]; then
     log "首次运行，克隆仓库：$REPO_URL ($BRANCH)"
     for i in 1 2 3 4 5; do
       if git clone --branch "$BRANCH" --depth 1 "$REPO_URL" "$SRC"; then break; fi
       log "克隆失败，30 秒后重试 ($i/5)"
       sleep 30
     done
-    if [ ! -d "$SRC/.git" ]; then
+    if [ ! -d "$SRC/.git" ] && [ ! -d "$SRC/../.git" ]; then
       log "克隆彻底失败，容器退出。请检查网络/代理/仓库地址。"
       exit 1
     fi
