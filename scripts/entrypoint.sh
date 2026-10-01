@@ -23,8 +23,8 @@ BRANCH="${BRANCH:-master}"
 INTERVAL="${SYNC_INTERVAL:-120}"
 REGISTRY="${NPM_REGISTRY:-https://registry.npmmirror.com}"
 AUTO_SYNC="${AUTO_SYNC:-0}"
-SRC=/blog
-OUT=/dist
+SRC="${SRC:-/blog}"
+OUT="${OUT:-/dist}"
 
 log() { echo "[builder $(date '+%F %T')] $*"; }
 
@@ -44,6 +44,8 @@ if [ "$AUTO_SYNC" != "0" ]; then
     apt-get update -qq && apt-get install -y -qq --no-install-recommends git ca-certificates
   fi
   git config --global --add safe.directory "$SRC"
+  git config --global user.name "maojiapeng6" 2>/dev/null || true
+  git config --global user.email "3229415202@qq.com" 2>/dev/null || true
 
   if [ -z "$REPO_URL" ]; then
     log "错误：AUTO_SYNC=1 但没有设置 REPO_URL"
