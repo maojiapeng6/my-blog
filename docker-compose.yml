@@ -24,9 +24,9 @@ services:
       # 1 = 远端为准：每 SYNC_INTERVAL 秒拉取远端并重建（本地改动会被覆盖）
       # 2 = 双向模式：本地改了自动推送，网页改了自动拉取（推荐长期用）
       #     用 2 之前，先在飞牛跑一次 github_setup.sh 把代码推上去
-      AUTO_SYNC: "0"
+      AUTO_SYNC: "2"
       # 模式 1 和 2 都要填你的仓库地址
-      REPO_URL: "https://github.com/你的GitHub用户名/你的仓库名.git"
+      REPO_URL: "https://github.com/maojiapeng6/my-blog.git"
       BRANCH: "master"
       # 检测文件变化的间隔（秒），120 = 每 2 分钟检查一次
       SYNC_INTERVAL: "120"
