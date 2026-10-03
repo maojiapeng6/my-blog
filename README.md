@@ -98,3 +98,5 @@ my-blog/
 ## License
 
 源码部分遵循原项目 License；文章内容与个人素材版权归我所有，转载请注明出处。
+
+> 仓库维护者：maojiapeng6（GitHub 账号），提交身份统一为 maojiapeng6@gmail.com。
