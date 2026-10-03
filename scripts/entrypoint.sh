@@ -46,7 +46,7 @@ if [ "$AUTO_SYNC" != "0" ]; then
   git config --global --add safe.directory "$SRC"
   git config --global --add safe.directory "$(dirname "$SRC")" 2>/dev/null || true
   git config --global user.name "maojiapeng6" 2>/dev/null || true
-  git config --global user.email "3229415202@qq.com" 2>/dev/null || true
+  git config --global user.email "maojiapeng6@gmail.com" 2>/dev/null || true
 
   if [ -z "$REPO_URL" ]; then
     log "错误：AUTO_SYNC=1 但没有设置 REPO_URL"
